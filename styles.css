@@ -1,0 +1,329 @@
+/* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Adding the new font */
+@font-face {
+    font-family: 'The Mythos';
+    src: url('assets/fonts/The Mythos.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styling the first letter with a vertical gradient color and glossy effect */
+.first-letter {
+    font-family: 'The Mythos', cursive;
+    font-size: 5em; /* Smaller font size */
+    float: left;
+    margin-right: 10px; /* Adjusted margin for better spacing */
+    margin-top: 0; /* Reset top margin */
+    line-height: 0.9; /* Adjust line-height for better alignment */
+    background: linear-gradient(to bottom, #ff8c00, #ff4500); /* Vertical gradient with vibrant oranges */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2); /* Adding slight shadow for a glossy effect */
+}
+
+/* Adjust line height and padding for paragraphs */
+.text p {
+    line-height: 1.5; /* Slightly reduced line-height for better wrapping */
+    padding: 0.5em 0;
+    text-align: justify;
+    margin-bottom: 1.5em; /* Added margin-bottom for more vertical space */
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff6347;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.main-heading {
+    font-family: 'Roboto', sans-serif; /* Example font, replace with your choice */
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subheading {
+    font-family: 'Montserrat', sans-serif; /* Example font, replace with your choice */
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/herobanner.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #ff6347; /* Example button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+}
+
+/* Sections */
+.section-padding {
+    padding: 4em 0;
+    background-color: #1a1a1a;
+}
+
+.section-padding:nth-of-type(even) {
+    background-color: #222;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #ff6347;
+}
+
+/* Content Boxes */
+.bordered-box {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.content .text, .content .image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+}
+
+.content .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.content .image img:hover {
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    margin: 1em 0;
+    padding: 2em;
+    background-color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+.feature-item i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #ff6347;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #222;
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #ff6347;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #ccc;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: #444;
+}
+
+.contact-form .btn {
+    display: block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 0.75em 2em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.contact-form .btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
